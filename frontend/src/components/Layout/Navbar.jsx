@@ -37,7 +37,9 @@ function Navbar() {
       <nav className={isAuthorized ? "navbarShow" : "navbarHide"}>
       <div className="container">
         <div className="logo">
-          <img src={logo1} alt="logo" />
+          <Link to={"/"}>
+            <h1 className="logo-text">JobPortalX</h1>
+          </Link>
         </div>
         <ul className={!show ? "menu" : "show-menu menu"}>
           <li>

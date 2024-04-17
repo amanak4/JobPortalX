@@ -747,6 +747,13 @@ p {
 .application .container form textarea:focus {
   outline: none;
 }
+
+.logo-text{
+  color: #088960;
+  font-weight: bold;
+  font-size: 25px;
+}
+
 .application .container form button,.submitApp {
   background-color: #2d5649;
   color: rgb(233, 249, 255);
@@ -1168,22 +1175,18 @@ nav .container {
 }
 nav .container .logo {
 
-  width:100px;
+  width:auto;
   
   /* height: 120px; */
 
 }
-nav .container .logo img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-}
 
+/* 
 @media (max-width: 1000px) {
   nav .container .logo {
     width:70px;
   }
-}
+} */
 
 nav .menu {
   display: flex;
