@@ -85,15 +85,22 @@ export const login = catchAsyncError(async (req,res,next)=>{
     sendToken(user,200,res,"User login successfully!");
 });
 
-export const logout = catchAsyncError(async(req,res,next)=>{
-    res.status(201).cookie("token","",{
-        httpOnly:true,
-        expires:new Date(Date.now()),
-    }).json({
-        status:true,
-        message:"Logout Successfully"
+export const logout = catchAsyncError(async(req, res, next) => {
+    // Set token cookie to 'none' and set its expiration to a past date
+    res.cookie("token", "none", {
+        expires: new Date(0), // Set expiration to a past date
+        httpOnly: true,
+        // domain: "job-portal-x.vercel.app", // Set domain if needed
+        secure: true, // Set secure flag if needed
+        sameSite: 'none', // Set sameSite attribute if needed
+    });
+
+      res.json({
+        status: true,
+        message: "Logout Successfully"
     });
 });
+
 
 export const getuser=catchAsyncError(async(req,res,next)=>{
     const us=req.user;
