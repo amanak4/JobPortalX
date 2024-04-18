@@ -1,1 +1,1 @@
-export const BASE_URL="https://job-seeking-zpzw.onrender.com";
+export const BASE_URL="https://jobportalx-wpxo.onrender.com";
